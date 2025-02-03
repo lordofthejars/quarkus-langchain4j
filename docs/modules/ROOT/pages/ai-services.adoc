@@ -32,7 +32,6 @@ Once registered, you can inject the _AI Service_ into your application:
 The beans created by `@RegisterAiService` are `@RequestScoped` by default. The reason for this is that it enables removing chat <<memory,memory>> objects.
 This is a good default when a service is used during when handling an HTTP request, but it's inappropriate in CLIs or in WebSockets (WebSocket support is expected to improve in the near future).
 For example when using a service in a CLI, it makes sense to have the service be `@ApplicationScoped` and the extension allows this simply if the service is annotated with `@ApplicationScoped`.
-====
 
 == AI method declaration
 
